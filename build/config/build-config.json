@@ -1,0 +1,63 @@
+{
+  "project": {
+    "name": "kio",
+    "version": "1.0.0",
+    "description": "Advanced Electron Code Editor with Professional Features"
+  },
+  "build": {
+    "clean": true,
+    "format": true,
+    "lint": true,
+    "typecheck": true,
+    "minify": true,
+    "sourcemap": true
+  },
+  "platforms": {
+    "linux": {
+      "enabled": true,
+      "targets": ["AppImage", "deb", "rpm"],
+      "icon": "resources/icon.png"
+    },
+    "mac": {
+      "enabled": true,
+      "targets": ["dmg", "zip"],
+      "icon": "resources/icon.icns"
+    },
+    "windows": {
+      "enabled": true,
+      "targets": ["nsis", "portable"],
+      "icon": "resources/icon.ico"
+    }
+  },
+  "development": {
+    "devServer": {
+      "port": 5173,
+      "host": "localhost",
+      "hot": true
+    },
+    "electron": {
+      "devTools": true,
+      "reloadOnChange": true
+    }
+  },
+  "production": {
+    "optimization": {
+      "minify": true,
+      "treeShaking": true,
+      "codeSplitting": true
+    },
+    "security": {
+      "nodeIntegration": false,
+      "contextIsolation": true,
+      "sandbox": true
+    }
+  },
+  "scripts": {
+    "install": "./scripts/install.sh",
+    "build": "./scripts/build.sh",
+    "build:package": "./scripts/build.sh --package",
+    "run": "./scripts/run.sh",
+    "run:dev": "./scripts/run.sh --dev",
+    "launch": "./kio.sh"
+  }
+}
