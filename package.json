@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Advanced Electron Code Editor with Professional Features",
   "main": "./out/main/index.js",
-  "author": "example.com",
+  "author": "https://github.com/DDDDprog/Kio-code.git",
   "homepage": "https://electron-vite.org",
   "scripts": {
     "postinstall": "electron-builder install-app-deps"
