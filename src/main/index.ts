@@ -237,7 +237,7 @@ class AdvancedEditor {
           },
           {
             label: 'Documentation',
-            click: () => shell.openExternal('https://github.com/your-repo/kio')
+            click: () => shell.openExternal('https://github.com/DDDDprog/Kio-code.git')
           }
         ]
       }
